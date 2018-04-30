@@ -1,8 +1,9 @@
 <?php
 
+namespace ashokgit;
+
 require_once __DIR__ . '/Rand.php';
 
-namespace ashokgit\ZipfDistributionGenerator;
 /**
  *
  */

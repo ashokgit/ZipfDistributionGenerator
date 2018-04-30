@@ -9,11 +9,11 @@
 		"email": "ashok.poudel@gmail.com"
 	}],
 	"require": {
-		"php": "^5.3.3 || ^7.0"
+		"php": "^5.6.0 || ^7.0"
 	},
 	"autoload": {
 		"psr-4": {
-			" ashokgit\\ZipfDistributionGenerator\\": "src/"
+			"ashokgit\\": "src/"
 		}
 	}
 }
