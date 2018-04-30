@@ -1,14 +1,19 @@
 {
 	"name": "ashokgit/zipfdistributiongenerator",
-	"psr-4": {
-		" ashokgit\\ZipfDistributionGenerator\\": "src/"
-	},
+	"type": "library",
 	"description": "A PHP Library for Generating Zipf Distribution",
 	"keywords": ["Zipf Distribution", "PHP Zipf Distribution Generator"],
 	"license": "MIT",
 	"authors": [{
 		"name": "Ashok Poudel",
 		"email": "ashok.poudel@gmail.com"
-	}]
-
+	}],
+	"require": {
+		"php": "^5.3.3 || ^7.0"
+	},
+	"autoload": {
+		"psr-4": {
+			" ashokgit\\ZipfDistributionGenerator\\": "src/"
+		}
+	}
 }
