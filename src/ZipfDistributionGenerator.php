@@ -8,7 +8,6 @@ namespace ashokgit\ZipfDistributionGenerator;
  */
 class ZipfDistributionGenerator
 {
-
     public $size;
     public $skew;
     public $bottom = 0;
