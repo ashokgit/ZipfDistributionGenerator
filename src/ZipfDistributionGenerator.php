@@ -1,15 +1,17 @@
 <?php
 
-require_once __DIR__ . '/src/Rand.php';
+require_once __DIR__ . '/Rand.php';
 /**
  *
  */
 class ZipfDistributionGenerator
 {
+
+    public $size;
+    public $skew;
+    public $bottom = 0;
+
     private $rnd;
-    private $size;
-    private $skew;
-    private $bottom = 0;
 
     /**
      * @param  int
@@ -18,7 +20,7 @@ class ZipfDistributionGenerator
      */
     public function generate()
     {
-        for ($i = 1; $i < $size; $i++) {
+        for ($i = 1; $i < $this->size; $i++) {
             $this->bottom += (1 / (pow($i, $this->skew)));
         }
         return;
