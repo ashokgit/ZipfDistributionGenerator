@@ -1,5 +1,7 @@
 <?php
 
+require __DIR__ . '/../src/ZipfDistributionGenerator.php';
+
 $zipf = new ZipfDistributionGenerator;
 $zipf->size = 10;
 $zipf->skew = .5;
