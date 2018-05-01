@@ -19,26 +19,23 @@ Usage
 
 	use ashokgit\ZipfDistributionGenerator;
 
-	$noOfItems = 10000;
-	$name = 'hits.csv';
-	$fp = fopen('data/' . $name, 'w');
+	$noOfItems = 10;
 
 	$zipf = new ZipfDistributionGenerator;
 	$zipf->size = 10;
 	$zipf->skew = .5;
 	$zipf->generate();
 
+	$probability = [];
 	for ($i = 1; $i < $noOfItems; $i++) {
-	    $fields = [$i, round($zipf->getProbability($i) * $noOfItems)];
-	    fputcsv($fp, $fields);
+	    $probability[] = $zipf->getProbability($i);
 	}
-	fclose($fp);
 
-	echo "Generated " . $i . " items \n";
-	echo "Please find the file $name \n";
+	print_r($probability);
 
-Result
-----------
+
+Result: a Zipf's Distribution over 10 items
+-------------------------------------------
 
 	Array
 	(
